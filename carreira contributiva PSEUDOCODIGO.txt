@@ -1,0 +1,80 @@
+
+
+funcao tipoDesgasteProfissao (): booleano;
+	se tipoProfissao= 1;
+	retorna ("profissao de desgaste rápido");
+	se tipoProfissao= 0;
+	retorna ("profissão de desgaste normal");
+fimFuncao
+
+
+
+funcao calculoPenalizacao1 (int idade, int carreiraContributiva ): inteiro;
+	penalizacao1= inteiro
+	soma = idade + carreiraContributiva;
+	se (soma == 90) entao:
+		penalizacao1= 0,6x soma;
+		retorna penalizacao1;
+fimFuncao
+
+
+
+funcao calculoPenalizacao2 (int idade, int carreiraContributiva): inteiro;
+	penalizacao2= inteiro:
+ 	soma = idade + carreiraContributiva;
+	se (soma == 100) entao:
+		penalizacao2= 0,6x soma;
+		retorna penalizacao2;
+fimFuncao
+
+
+
+
+INICIO
+
+
+VAR
+int idade;
+int carreiraContributiva;
+bool tipoProfissao; // 1-sim, 0- não
+
+
+
+escrever ("Tipo de profissão considerada de desgaste rápido?"); 
+ler (tipoProfissao);
+escrever ("Digite sua idade atual");
+ler (idade);
+escrever ("Digite seu tempo de carreira contributiva atual");
+ler (carreiraContributiva);
+
+
+funcao tipoDesgasteProfissao ();
+
+
+se (tipoProfissao==1) entao:
+	se (idade>55 e carreiraContributiva>30) entao
+		escrever("pode reformar");
+	se (idade>50 e carreiraContributiva>40) entao
+		escrever("pode reformar");
+	senao 
+		escrever ("calculoPenalizacao1");
+fse
+
+
+se (tipoProfissao==0) entao:
+	se (idade>66) entao
+		escrever("pode reformar");
+	se (idade>60 e carreiraContributiva>40) entao
+		escrever("pode reformar");
+	senao 
+		escrever ("calculoPenalizacao2");
+fse
+
+
+
+
+
+
+
+
+
